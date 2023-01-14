@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/storydoc-editor/static/css/main.073c9b0a.css",
-    "main.js": "/storydoc-editor/static/js/main.d55a0bd6.js",
+    "main.css": "/storydoc-editor/static/css/main.3551f3f5.css",
+    "main.js": "/storydoc-editor/static/js/main.d18d7eeb.js",
     "static/js/787.8c14155e.chunk.js": "/storydoc-editor/static/js/787.8c14155e.chunk.js",
-    "static/media/logo.svg": "/storydoc-editor/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/storydoc-editor/index.html",
-    "main.073c9b0a.css.map": "/storydoc-editor/static/css/main.073c9b0a.css.map",
-    "main.d55a0bd6.js.map": "/storydoc-editor/static/js/main.d55a0bd6.js.map",
+    "main.3551f3f5.css.map": "/storydoc-editor/static/css/main.3551f3f5.css.map",
+    "main.d18d7eeb.js.map": "/storydoc-editor/static/js/main.d18d7eeb.js.map",
     "787.8c14155e.chunk.js.map": "/storydoc-editor/static/js/787.8c14155e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.d55a0bd6.js"
+    "static/css/main.3551f3f5.css",
+    "static/js/main.d18d7eeb.js"
   ]
 }
