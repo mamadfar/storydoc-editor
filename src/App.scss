@@ -1,0 +1,39 @@
+@use "./src/assets/scss/var";
+@use "./src/assets/scss/func";
+
+@for $i from 1 through 4 {
+  .ms-#{$i} {
+    margin-left: func.pxToRem(var.$defaultSize * $i);
+  }
+  .me-#{$i} {
+    margin-right: func.pxToRem(var.$defaultSize * $i);
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+.flex-1 {
+  flex: 1;
+}
+
+.font {
+  &-sm {
+    font-size: 0.6rem;
+  }
+
+  &-md {
+    font-size: 0.8rem;
+  }
+
+  &-lg {
+    font-size: 1rem;
+  }
+  &-xl {
+    font-size: 1.5rem;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

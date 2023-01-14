@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.scss";
+import MainLayout from "./layout/MainLayout";
+import Editor from "./pages/editor/Editor";
+import EditorProvider from "./hooks/useEditor";
+import { getDataService } from "./service/data.service";
+import { IMockSectionEditableData } from "./model/Icon.model";
 
 function App() {
+  const [dataList, setDataList] = useState<
+    ReadonlyArray<IMockSectionEditableData>
+  >([]);
+
+  const getDataList = async () => {
+    try {
+      const { data } = await getDataService();
+      setDataList(data);
+    } catch (e) {
+      return e;
+    }
+  };
+
+  useEffect(() => {
+    getDataList();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainLayout>
+      {dataList.length ? (
+        <EditorProvider data={dataList}>
+          <Editor />
+        </EditorProvider>
+      ) : (
+        <h2>Loading...</h2>
+      )}
+    </MainLayout>
   );
 }
 

@@ -1,0 +1,5 @@
+@use "./var";
+
+@function pxToRem($px) {
+  @return $px / var.$appFontSize + rem;
+}
