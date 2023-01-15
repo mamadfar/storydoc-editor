@@ -4,8 +4,16 @@
 
 | Version            |
 | :----------------- |
+| [`0.3.0`](#v0.3.0) |
 | [`0.2.0`](#v0.2.0) |
 | [`0.1.0`](#v0.1.0) |
+
+### <a id="v0.3.0"/>`0.3.0`
+
+- Removed unnecessary files and codes
+- Added `Draggable` component
+- Changed the context and draggable section logic
+- Improved styles
 
 ### <a id="v0.2.0"/>`0.2.0`
 

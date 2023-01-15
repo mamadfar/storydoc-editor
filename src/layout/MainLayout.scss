@@ -1,9 +1,14 @@
 .layout {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: center;
+  //align-items: center;
+  height: 100vh;
   text-align: center;
   gap: 4rem;
-  height: 100vh;
+  @media screen and (max-width: 700px) {
+	gap: 2rem;
+  }
 }

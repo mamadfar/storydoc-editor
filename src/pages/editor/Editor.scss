@@ -1,8 +1,12 @@
 .editor {
   &__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 4rem;
+	@media screen and (max-width: 700px) {
+	  flex-direction: column;
+	  gap: 2rem;
+	}
   }
 }

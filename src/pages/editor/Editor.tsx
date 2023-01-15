@@ -6,10 +6,6 @@ import { TEXT_TYPE } from "../../model/context.model";
 import SectionsList from "./components/SectionsList";
 import { IMockSectionEditableData } from "../../model/Icon.model";
 
-// const Ahmad: any = ({ Man }: any) => {
-//   return <Man />;
-// };
-
 const Editor = () => {
   const [iconId, setIconId] = useState<string | 0>(0);
   const { textChanger, listOfData } = useEditor();

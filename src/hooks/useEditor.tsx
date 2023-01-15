@@ -22,10 +22,6 @@ interface IInitialState {
   listOfData: IMockSectionEditableData[];
 }
 
-// const initialState = {
-//     listOfData: [...MOCK_SECTION_EDITABLE_DATA]
-// };
-
 const editorReducer = (state: IInitialState, action: ACTION_TYPE) => {
   switch (action.type) {
     case ICON: {
@@ -44,27 +40,8 @@ const editorReducer = (state: IInitialState, action: ACTION_TYPE) => {
       if (filteredItem) filteredItem[action.payload.type] = action.payload.text;
       return { ...state, listOfData: data };
     }
-    case ORDER: {
-      const copiedData = [...state.listOfData];
-      const dragSection = copiedData.find(
-        (item) => item.id === action.payload.dragId
-      );
-      const dropSection = copiedData.find(
-        (item) => item.id === action.payload.eventId
-      );
-
-      const dragSectionOrder = dragSection?.order;
-      const dropSectionOrder = dropSection?.order;
-
-      const newSectionState = copiedData.map((item) => {
-        if (item.id === action.payload.dragId)
-          item.order = dropSectionOrder || item.order;
-        if (item.id === action.payload.eventId)
-          item.order = dragSectionOrder || item.order;
-        return item;
-      });
-      return { ...state, listOfData: newSectionState };
-    }
+    case ORDER:
+      return { ...state, listOfData: action.payload };
     default:
       return { ...state };
   }
@@ -93,8 +70,8 @@ const EditorProvider: FC<{
       [dispatch, state]
     ),
     orderChanger: useCallback(
-      (dragId: string, eventId: string) => {
-        dispatch({ type: ORDER, payload: { dragId, eventId } });
+      (newListOfData) => {
+        dispatch({ type: ORDER, payload: newListOfData });
       },
       [dispatch, state]
     ),

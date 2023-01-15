@@ -39,7 +39,7 @@ const IconsList: FC<IIconsList> = ({ iconId, onClose }) => {
             {iconsName.map((icon: Icons_type) => (
               <i
                 key={icon}
-                className="material-icons cursor-pointer"
+                className="material-icons cursor-pointer font-xl"
                 onClick={() => iconHandler(icon)}
               >
                 {icon}

@@ -1,7 +1,8 @@
-import React, { DragEvent, FC, useState } from "react";
+import React, { FC, useState } from "react";
 import { EditableSection, Icon } from "../../../components";
 import { useEditor } from "../../../hooks/useEditor";
 import { ISectionsList } from "../../../model/editableSection.model";
+import Draggable from "../../../components/Draggable";
 
 const SectionsList: FC<ISectionsList> = ({
   data,
@@ -11,29 +12,22 @@ const SectionsList: FC<ISectionsList> = ({
   const [dragId, setDragId] = useState<string>("");
   const { orderChanger } = useEditor();
 
-  const handleDrag = (e: DragEvent<HTMLDivElement>) => {
-    setDragId(e.currentTarget.id);
-  };
-  const handleDrop = (e: DragEvent<HTMLDivElement>) => {
-    orderChanger(dragId, e.currentTarget.id);
-  };
-
   return (
     <>
       {data
         .sort((a, b) => a.order - b.order)
         .map((item) => (
-          <div
+          <Draggable
             key={item.id}
+            data={data}
+            setData={orderChanger}
             id={item.id}
-            draggable={true}
-            onDragStart={handleDrag}
-            onDrop={handleDrop}
-            onDragOver={(e) => e.preventDefault()}
+            dragId={dragId}
+            setDragId={setDragId}
           >
             <Icon
               icon={item.icon.name}
-              style={{ fontSize: 80 }}
+              style={{ fontSize: "5rem" }}
               onClick={() => setIconId(item.id)}
               className="cursor-pointer"
             />
@@ -50,7 +44,7 @@ const SectionsList: FC<ISectionsList> = ({
                 onBlurHandler(text, "sub_heading", item.id)
               }
             />
-          </div>
+          </Draggable>
         ))}
     </>
   );

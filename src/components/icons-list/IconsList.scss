@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 0 auto;
   max-width: 300px;
   height: 100px;
   position: relative;
@@ -14,5 +15,8 @@
 	right: func.pxToRem(-20);
 	top: func.pxToRem(-10);
 	font-size: 1.2rem;
+	@media screen and (max-width: 700px) {
+	  top: func.pxToRem(-3);
+	}
   }
 }
