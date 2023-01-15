@@ -3,22 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="78b77a7b-cfc9-446e-8551-aaeed103d442" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/change-log.md" beforeDir="false" afterPath="$PROJECT_DIR$/change-log.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/index.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/icons-list/IconsList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icons-list/IconsList.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/icons-list/IconsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icons-list/IconsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/MainLayout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/MainLayout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/context.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/context.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/editor/Editor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/editor/Editor.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/editor/Editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/editor/Editor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/editor/components/SectionsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/editor/components/SectionsList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
